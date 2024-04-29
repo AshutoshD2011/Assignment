@@ -1,0 +1,55 @@
+<div class="container-fluid main-div">
+    <div class="row">
+        <div class="col-12 d-flex">
+            <div class="col-5 ">
+                <div class="main1">
+                    <div style="width: 100%;">
+                        <i class="fa fa-solid fa-rocket"></i>
+                        <h3> Welcome</h3>
+                        <div class="content-div">
+                            <p>You are 30 seconds away from earning your own money </p> 
+                        </div>
+                    </div>
+                    <div class="butt-div">
+                            <button class="btn btn-outline-warning ">Login</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-7 mt-2">
+                    <div class="col-7 shadow p-3 mb-5 bg-white rounded">
+                        <h2 class="text-center">Add New Person</h2>
+                        <form [formGroup]="newPerson" (ngSubmit)="saveData()">
+                            <div class="form-group">
+                                <label >Person Name</label>
+                                <input type="text" class="form-control" formControlName="person_name" placeholder="Enter Name">
+                            </div>
+                            <div class="form-group">
+                                <label >Person Email</label>
+                                <input type="text" class="form-control" formControlName="person_email" placeholder="Enter Email">
+                            </div>
+                            <div class="form-group">
+                                <label >DOB</label>
+                                <input type="date" class="form-control" formControlName="person_dob" placeholder="DOB">
+                            </div>
+                            <div class="form-group">
+                                <label >Person Avtar</label>
+                                <input type="file" class="form-control" placeholder="Avtar" (change)="setImage($event)">
+                            </div>
+                            <div class="form-group">
+                                <label >Person country</label><br>
+                                <select formControlName="person_country">
+                                    <option disabled selected value="Select Country" class="form-control">Select Country</option>
+                                    <option class="form-control">India</option>
+                                    <option class="form-control">Australia</option>
+                                    <option class="form-control">Malesia</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-primary">Add Person</button>
+                            </div>
+                        </form>
+                    </div>
+            </div>
+        </div> 
+    </div>
+</div>

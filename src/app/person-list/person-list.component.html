@@ -1,0 +1,15 @@
+<div class="main-div">
+    <div class="container">
+        <div class="col-4 offset-6 d-flex">
+            <input [(ngModel)]="searchText" type="text" placeholder="Search" class="form-control">
+            <button  class="btn btn-dark mx-2"><i class="fa fa-search"></i></button>
+        </div>
+        <div class="row">
+            <ng-container *ngFor="let person of personList | search: searchText">
+                <div class="col-4">
+                <app-card-view [person]="person"></app-card-view>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</div>

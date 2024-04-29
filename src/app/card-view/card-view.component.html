@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="container">
+        <div class="row">
+                <div class="col-12 mt-5">
+                    <div class="card mb-3" style="height: 350px;">
+                        <div class="card-header">
+                            <h5><a routerLink="/edit-person/{{person.id}}" >{{person.p_name}}</a></h5>
+                        </div>
+                        <div class="card-body img-class">
+                            <img [src]="person?.p_avtar" class="img-thumbnail">
+                        </div>
+                        <div class="card-footer">
+                            Email : {{person?.p_email}} <br>
+                            Age : {{person?.p_dob | age}} <br>
+                            Country : {{person?.p_country}}
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- <div class="col-8">
+                <div class="card">
+                    <div class="card-header">
+                        {{person?.p_name}}
+                    </div>
+                    <div class="card-body">
+                        <img [src]="person?.p_avtar" width="100" height="100">
+                        {{person?.p_email}}
+                        {{person?.p_country}}
+                        {{person?.p_dob}}
+                    </div>
+                    <div class="card-footer">
+                    </div>
+        </div>
+       -->
+

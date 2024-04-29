@@ -1,0 +1,41 @@
+<div class="container-fluid main-div">
+    <div class="row">
+        <div class="col-12">
+            <div class="col-4 offset-4 shadow p-3 mb-5 bg-white rounded">
+                <h2 class="text-center">Edit Person</h2>
+                <div *ngIf="update_person_form ">
+                    <form [formGroup]="update_person_form " (ngSubmit)="update()">
+                        <div class="form-group">
+                            <label >Person Name</label>
+                            <input type="text" class="form-control" formControlName="p_name" placeholder="Enter Name">
+                        </div>
+                        <div class="form-group">
+                            <label >Person Email</label>
+                            <input type="text" class="form-control" formControlName="p_email" placeholder="Enter Email">
+                        </div>
+                        <div class="form-group">
+                            <label >DOB</label>
+                            <input type="date" class="form-control" formControlName="p_dob" placeholder="DOB">
+                        </div>
+                        <div class="form-group">
+                            <label >Person Avtar</label>
+                            <input type="file" class="form-control" placeholder="Avtar" (change)="onAvatarSelected($event)" >
+                        </div>
+                        <div class="form-group">
+                            <label >Person country</label><br>
+                            <select formControlName="p_country">
+                                <option disabled selected value="Select Country" class="form-control">Select Country</option>
+                                <option class="form-control">India</option>
+                                <option class="form-control">Australia</option>
+                                <option class="form-control">Malesia</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-primary">Update</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
